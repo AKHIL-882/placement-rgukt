@@ -148,10 +148,10 @@
                 <div class="card p-3">
                     <h4>Placement Details </h4>
                     <div class="card-block mt-2">
-                        <div class="col-md-12 card p-4">
+                        <div class="col-md-12 card p-1">
                             @foreach($placements as $placement)
                             <div class="row mt-1">
-                            <div class="col-md-1">
+                                <div class="col-md-1">
                                     <div class="photo-box">
                                         <h6>{{$placement->id}}</h6>
                                     </div>
@@ -199,6 +199,7 @@
                         &copy; Designed and Developed by <a href="https://www.linkedin.com/in/duggirala-akhil-151768187/" target="_blank">| Akhil Duggirala |</a>
                     </div>
                 </span></strong> All Rights Reserved
+            <img src="https://hitwebcounter.com/counter/counter.php?page=8022360&style=0025&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter" border="0" style="float:right; height:18px" />
         </div>
     </footer>
 </body>
