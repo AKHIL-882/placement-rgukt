@@ -147,44 +147,27 @@
             <div class="pagetitle mt-5000 container">
                 <div class="card p-3">
                     <h4>Placement Details </h4>
-                    <div class="card-block mt-2">
-                        <div class="col-md-12 card p-1">
-                            @foreach($placements as $placement)
-                            <div class="row mt-1">
-                                <div class="col-md-1">
-                                    <div class="photo-box">
-                                        <h6>{{$placement->id}}</h6>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="photo-box">
-                                        <h6>{{$placement->company_name}}</h6>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="photo-box">
-                                        <h6>{{$placement->branch}}</h6>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="photo-box">
-                                        <h6>{{$placement->type}}</h6>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="photo-box">
-                                        <h6>{{$placement->year}}</h6>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="photo-box">
-                                        <h6><button type="button" class="btn btn-info"><a href="{{$placement->url}}" target="blank">Link</a></button></h6>
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
-                        </div>
-                    </div>
+                    <table class="table table-striped table-hover mt-4">
+                        <tr>
+                            <td>S.No</td>
+                            <td>Company Name</td>
+                            <td>Type</td>
+                            <td>Batch</td>
+                            <td>Passout Year</td>
+                            <td>Link</td>
+                        </tr>
+                        @foreach($placements as $placement)
+                        <tr>
+                            <td>{{$placement->id}}</td>
+                            <td>{{$placement->company_name}}</td>
+                            <td>{{$placement->type}}</td>
+                            <td>{{$placement->branch}}</td>
+                            <td>{{$placement->year}}</td>
+                            <td><button type="button" class="btn btn-info"><a href="{{$placement->url}}" target="blank">Link</a></button></td>
+                        </tr>
+                        @endforeach
+                    </table>
+
                 </div>
             </div>
         </section>
