@@ -19,7 +19,7 @@
 
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-
+    <script src="css/app.js" type="text/javascript"></script>
     <link href="/css/style.css" rel="stylesheet">
 </head>
 
@@ -145,9 +145,9 @@
             </div>
 
             <div class="pagetitle mt-5000 container">
-                <div class="card p-3">
+                <div class="card p-3" style="height:auto;">
                     <h4>Placement Details </h4>
-                    <table class="table table-striped table-hover mt-4">
+                    <table id="dtHorizontalExample" class="table table-striped table-hover mt-4 table-bordered table-sm" cellspacing="0" width="100%">
                         <tr>
                             <td>S.No</td>
                             <td>Company Name</td>

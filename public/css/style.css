@@ -669,3 +669,20 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 13px;
   color: #012970;
 }
+
+
+
+
+
+
+table {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+
+tr {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
