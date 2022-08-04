@@ -41,16 +41,7 @@
             </form>
         </div>
 
-        <nav class="header-nav ms-auto">
-            <ul class="d-flex align-items-center">
-                <li class="nav-item dropdown pe-3">
-                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="https://st.depositphotos.com/2101611/4338/v/600/depositphotos_43381243-stock-illustration-male-avatar-profile-picture.jpg" alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2"> Student </span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        
 
     </header>
     <aside id="sidebar" class="sidebar">
@@ -148,7 +139,7 @@
                 <div class="card p-3" style="height:auto;">
                     <h4>Placement Details </h4>
                     <table id="dtHorizontalExample" class="table table-striped table-hover mt-4 table-bordered table-sm" cellspacing="0" width="100%">
-                        <tr>
+                        <tr style="padding:10px">
                             <td>S.No</td>
                             <td>Company Name</td>
                             <td>Type</td>
