@@ -137,7 +137,7 @@
 
             <div class="pagetitle mt-5000 container">
                 <div class="card p-3" style="height:auto;">
-                    <h4>Placement Details <button type="button" class="btn btn-info" style="float:right";><a href="{{url('/create')}}" target="self">Create</a></button></h4>
+                    <h4>Placement Details <button type="button" class="btn btn-info" style="float:right";><a href="{{url('/create')}}" >Create</a></button></h4>
                     <table id="dtHorizontalExample" class="table table-striped table-hover mt-4 table-bordered table-sm" cellspacing="0" width="100%">
                         <tr style="padding:10px">
                             <td>S.No</td>
