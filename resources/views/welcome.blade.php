@@ -88,7 +88,7 @@
                         <div class="col-md-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Placements</h5>
+                                    <h5 class="card-title">Placements <button type="button" class="btn btn-info"><a href="{{/create}}" target="blank">Create</a></button></h5>
                                     <div class="d-flex align-items-center">
                                         <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                                             <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Rgulogo.jpg" alt="" height="25px" width="50px">
