@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PlacementsController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\URL;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+if (env('APP_ENV') === 'production') {
+    URL::forceSchema('https');
+}
 
 Route::get('/', [PlacementsController::class, 'index']);
 Route::get('/create', [PlacementsController::class, 'create']);
