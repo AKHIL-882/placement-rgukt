@@ -12,7 +12,7 @@ class HomeController extends Controller
 
     public function index(){
         $placements = Placement::all();
-        return view('admin.dashboard',['placements'=>$placements]);
+        return view('admin.index',['placements'=>$placements]);
     }
 
     
