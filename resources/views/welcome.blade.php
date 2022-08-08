@@ -2,213 +2,180 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>| Placement RGUKT IIIT SKLM |</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <title>| Placements - RGUKT SKLM | Dashboard </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- Vendor CSS Files -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="vendor/aos/aos.css" rel="stylesheet">
-  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="logo.jfif" rel="icon">
+    <link href="logo.jfif" rel="apple-touch-icon">
 
-  <!-- Template Main CSS File -->
-  <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <script src="css/app.js" type="text/javascript"></script>
+    <link href="/css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <section id="topbar" class="topbar d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">s160***@rguktsklm.ac.in</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 *******992</span></i>
-      </div>
-      <div class="social-links d-none d-md-flex align-items-center">
-        <a href="https://www.linkedin.com/in/duggirala-akhil-151768187/" target="blank" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div>
-    </div>
-  </section><!-- End Top Bar -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+        <div class="d-flex align-items-center justify-content-between">
+            <a href="#.html" class="logo d-flex align-items-center">
+                <img src="logo.jfif" alt="">
+                <span class="d-none d-lg-block">RGUKT SKLM</span>
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div>
 
-  <header id="header" class="header d-flex align-items-center">
+        <div class="search-bar">
+            <form class="search-form d-flex align-items-center" method="POST" action="#">
+                <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+            </form>
+        </div>
 
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <h1>RGUKT - SKLM</h1>
-      </a>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="#hero">Home</a></li>
+        
+
+    </header>
+    <aside id="sidebar" class="sidebar">
+        <ul class="sidebar-nav" id="sidebar-nav">
+            <li class="nav-item">
+                <a class="nav-link " href="index.html">
+                    <i class="fa fa-dedent"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#.html">
+                    <i class="fa fa-list-alt"></i>
+                    <span>Placements</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#.html">
+                    <i class='fa fa-list-alt'></i>
+                    <span>Internships</span>
+                </a>
+            </li>
         </ul>
-      </nav><!-- .navbar -->
 
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </aside><!-- End Sidebar-->
 
-    </div>
-  </header><!-- End Header -->
-  <!-- End Header -->
+    <main id="main" class="main">
+        <div class="pagetitle mt-5000 container">
+            <div class="card p-3">
+                <h1>Dashboard</h1>
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#.html">Home</a></li>
+                        <li class="breadcrumb-item active">Dashboard</li>
+                    </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero">
-    <div class="container position-relative">
-      <div class="row gy-5" data-aos="fade-in">
-        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
-          <h2>Welcome to <span>RGUKT IIIT SKLM  PLACEMENTS</span></h2>
-          <p> Placement Cell is a One-Stop Destination to skill - reskill yourself. More than 1000+ students trust and build strong careers</p>
-          <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="admin/login" class="btn-get-started">Admin Login</a> &nbsp;&nbsp;
-            <a href="login" class="btn-get-started p-3">Student Login</a>
-            
-          </div>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2">
-          <img src="img/about-2.jpg" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Hero Section -->
-
-
-    <!-- ======= Stats Counter Section ======= -->
-    <section id="stats-counter" class="stats-counter">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Our Records</h2>
-          <p>One of the Unique features of Placement Cell is to conduct various test to ensure an in-depth understanding of the concepts & experience the pure joy of learning
-          </p>
-        </div>
-
-        <div class="row gy-4 align-items-center">
-
-          <div class="col-lg-6">
-            <img src="img/stats-img.svg" alt="" class="img-fluid">
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="stats-item d-flex align-items-center">
-              <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Placement Partners</strong> </p>
-            </div><!-- End Stats Item -->
-
-            <div class="stats-item d-flex align-items-center">
-              <span data-purecounter-start="0" data-purecounter-end="800" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Placemented Candidates</strong></p>
-            </div><!-- End Stats Item -->
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Stats Counter Section -->
-
-    
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
-      <div class="container" data-aos="zoom-out">
-        <div class="clients-slider swiper">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="https://www.topdevelopers.co/upload/202012071348451297118497.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/oo2jkovct71mibgzwfkh" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://economictimes.indiatimes.com/thumb/msid-58480138,width-1200,height-900,resizemode-4,imgsize-38943/wipro-launches-new-brand-identity.jpg?from=mdr" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://www.tcs.com/content/dam/tcs/images/Newtcslogo/tcs-logo-tata-blue-1x-dec2021.png" class="img-fluid" alt=""></div>
-            
-          </div>
-        </div>
-      </div>
-    </section><!-- End Clients Section -->
-
-    
-    
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-info">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span>RGUKT IIIT SKLM PLACEMENTS</span>
-          </a>
-          <p>Placement Cell is a One-Stop Destination to skill - reskill yourself. <br>More than 1000+ students trust and build strong careers</p>
-          <div class="social-links d-flex mt-4">
-
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="https://rguktsklm.ac.in/" target="blank">RGUKT IIIT Srikakulam</a></li>
-            <li><a href="#">RGUKT IIIT Nuzvid</a></li>
-            <li><a href="#">RGUKT IIIT RKV</a></li>
-            <li><a href="#">RGUKT IIIT Ongole</a></li>
-            <li><a href="#">RGUKT IIIT Basara</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          
-        </div>
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>
-            Rajiv Gandhi University of Knowledge Technologies-Srikakulam Campus,<br>
-             S.M Puram, Etcherla(M)<br>
-              Srikakulam District,<br>
-              Andhra Pradesh - 532402
-          </p>
-
-        </div>
-
-      </div>
-    </div>
-
-    <div class="container mt-4">
-      <hr>
-      <div class="copyright">
-        <strong><span>
-                <div class="credits">
-                    &copy; Designed and Developed by <a href="https://www.linkedin.com/in/duggirala-akhil-151768187/" target="_blank">| Akhil Duggirala |</a>
+        <section class="section dashboard">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Placements </h5>
+                                    <div class="d-flex align-items-center">
+                                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Rgulogo.jpg" alt="" height="25px" width="50px">
+                                        </div>
+                                        <div class="ps-3">
+                                            <?php
+                                            $count = 0;
+                                            foreach ($placements as $placement) {
+                                                if ($placement->type == 'Job') {
+                                                    $count++;
+                                                }
+                                            }
+                                            echo $count;
+                                            ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Internships</h5>
+                                    <div class="d-flex align-items-center">
+                                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Rgulogo.jpg" alt="" height="25px" width="50px">
+                                        </div>
+                                        <div class="ps-3">
+                                            <?php
+                                            $count = 0;
+                                            foreach ($placements as $placement) {
+                                                if ($placement->type == 'Internship') {
+                                                    $count++;
+                                                }
+                                            }
+                                            echo $count;
+                                            ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </span></strong> All Rights Reserved
-        <img src="https://hitwebcounter.com/counter/counter.php?page=8022360&style=0025&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter" border="0" style="float:right; height:18px" />
-    </div>
-    </div>
+            </div>
 
-  </footer><!-- End Footer -->
-  <!-- End Footer -->
+            <div class="pagetitle mt-5000 container">
+                <div class="card p-3" style="height:auto;">
+                    <h4>Placement Details <button type="button" disabled class="btn btn-info" style="float:right";><a href="{{url('/create')}}" >Create</a></button></h4>
+                    <table id="dtHorizontalExample" class="table table-striped table-hover mt-4 table-bordered table-sm" cellspacing="0" width="100%">
+                        <tr style="padding:10px">
+                            <td>S.No</td>
+                            <td>Company Name</td>
+                            <td>Type</td>
+                            <td>Batch</td>
+                            <td>Passout Year</td>
+                            <td>Link</td>
+                        </tr>
+                        @foreach($placements as $placement)
+                        <tr>
+                            <td>{{$placement->id}}</td>
+                            <td>{{$placement->company_name}}</td>
+                            <td>{{$placement->type}}</td>
+                            <td>{{$placement->branch}}</td>
+                            <td>{{$placement->year}}</td>
+                            <td><button type="button" class="btn btn-info"><a href="{{$placement->url}}" target="blank">Link</a></button></td>
+                        </tr>
+                        @endforeach
+                    </table>
 
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+                </div>
+            </div>
+        </section>
 
-  <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/aos/aos.js"></script>
-  <script src="vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="js/main.js"></script>
-
+    </main>
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            <strong><span>
+                    <div class="credits">
+                        &copy; Designed and Developed by <a href="https://www.linkedin.com/in/duggirala-akhil-151768187/" target="_blank">| Akhil Duggirala |</a>
+                    </div>
+                </span></strong> All Rights Reserved
+            <img src="https://hitwebcounter.com/counter/counter.php?page=8022360&style=0025&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter" border="0" style="float:right; height:18px" />
+        </div>
+    </footer>
 </body>
 
 </html>
