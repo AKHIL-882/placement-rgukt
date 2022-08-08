@@ -5,10 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 use App\Models\{
-    User,
-    ProjectAccess,
-    Project,
-    Tools,
+    User
 };
 
 class UserSeeder extends Seeder

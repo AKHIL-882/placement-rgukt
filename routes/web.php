@@ -17,33 +17,33 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+// require __DIR__.'/auth.php';
 
 
 
 // Admin Routes
 
 
-Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
-    Route::namespace('Auth')->middleware('guest:admin')->group(function(){
+// Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
+//     Route::namespace('Auth')->middleware('guest:admin')->group(function(){
 
-        // login route
-        Route::get('login','AuthenticatedSessionController@create')->name('login');
-        Route::post('login','AuthenticatedSessionController@store')->name('adminlogin');
+//         // login route
+//         Route::get('login','AuthenticatedSessionController@create')->name('login');
+//         Route::post('login','AuthenticatedSessionController@store')->name('adminlogin');
 
-    });
-    Route::middleware('admin')->group(function(){
-          Route::get('/dashboard','HomeController@index')->name('dashboard');
-          Route::resource('/placements',PlacementsController::class);
+//     });
+//     Route::middleware('admin')->group(function(){
+//           Route::get('/dashboard','HomeController@index')->name('dashboard');
+//           Route::resource('/placements',PlacementsController::class);
        
-    });
+//     });
 
-     Route::post('logout','Auth\AuthenticatedSessionController@destroy')->name('logout');
-});
+//      Route::post('logout','Auth\AuthenticatedSessionController@destroy')->name('logout');
+// });
 
 
 
