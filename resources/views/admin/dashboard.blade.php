@@ -153,16 +153,20 @@
                             <td>Passout Year</td>
                             <td>Link</td>
                         </tr>
+                        
+                        
                         @foreach($placements as $placement)
                         <tr>
-                            <td>{{$placement->id}}</td>
+                            <td>{{$placement->created_at}}</td>
                             <td>{{$placement->company_name}}</td>
                             <td>{{$placement->type}}</td>
                             <td>{{$placement->branch}}</td>
                             <td>{{$placement->year}}</td>
                             <td><button type="button" class="btn btn-info"><a href="{{$placement->url}}" target="blank">Link</a></button></td>
                         </tr>
+                        
                         @endforeach
+                    
                     </table>
 
                 </div>

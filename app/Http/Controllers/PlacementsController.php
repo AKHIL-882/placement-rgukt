@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Placement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PlacementsController extends Controller
 {
@@ -15,7 +16,9 @@ class PlacementsController extends Controller
     public function index()
     {
         //
-        $placements = Placement::all();
+        $placements = DB::table('placements')
+                ->orderBy('id', 'desc')
+                ->get();
         return view('welcome',['placements'=>$placements]);
     }
 
@@ -27,7 +30,9 @@ class PlacementsController extends Controller
     public function create()
     {
         //
-        $placements = Placement::all();
+        $placements = DB::table('placements')
+                ->orderBy('id', 'desc')
+                ->get();
         return view('create',['placements'=>$placements]);
 
     }

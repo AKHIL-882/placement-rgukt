@@ -113,7 +113,7 @@
                                                             <select class="form-select" aria-label="Default select example" name="type">
                                                                 <option selected>Select Type</option>
                                                                 <option value="Internship" name="Internship">Internship</option>
-                                                                <option value="Job" name="Job">Job</option>
+                                                                <option value="Job" name="Job">Placement</option>
                                                             </select>
                                                         </div>
                                                         <div class="col mt-2">
@@ -122,7 +122,7 @@
                                                                 <option selected>Select Branch</option>
                                                                 <option value="CSE" name="CSE">CSE</option>
                                                                 <option value="ECE" name="ECE">ECE</option>
-                                                                <option value="Others" name="Others">Others</option>
+                                                                <option value="Others" name="Others">All</option>
                                                             </select>
                                                         </div>
                                                         <div class="col mt-2">

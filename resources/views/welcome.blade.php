@@ -140,7 +140,7 @@
                     <h4>Placement Details <button type="button" disabled class="btn btn-info" style="float:right";><a href="{{url('/create')}}" >Create</a></button></h4>
                     <table id="dtHorizontalExample" class="table table-striped table-hover mt-4 table-bordered table-sm" cellspacing="0" width="100%">
                         <tr style="padding:10px">
-                            <td>S.No</td>
+                            <td>Date</td>
                             <td>Company Name</td>
                             <td>Type</td>
                             <td>Batch</td>
@@ -149,7 +149,7 @@
                         </tr>
                         @foreach($placements as $placement)
                         <tr>
-                            <td>{{$placement->id}}</td>
+                        <td>{{date('m-Y',strtotime($placement->created_at))}}</td>
                             <td>{{$placement->company_name}}</td>
                             <td>{{$placement->type}}</td>
                             <td>{{$placement->branch}}</td>

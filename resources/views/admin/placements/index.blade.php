@@ -157,7 +157,7 @@
                         </tr>
                         @foreach($placements as $placement)
                         <tr>
-                            <td>{{$placement->id}}</td>
+                            <td>{{$placement->created_at}}</td>
                             <td>{{$placement->company_name}}</td>
                             <td>{{$placement->type}}</td>
                             <td>{{$placement->branch}}</td>
