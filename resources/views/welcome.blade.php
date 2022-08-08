@@ -81,7 +81,7 @@
             </div>
         </div><!-- End Page Title -->
 
-        <section class="section dashboard">
+        <!-- <section class="section dashboard">
             <div class="container">
                 <div class="col-md-12">
                     <div class="row">
@@ -133,11 +133,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="pagetitle mt-5000 container">
                 <div class="card p-3" style="height:auto;">
-                    <h4>Placement Details <button type="button" disabled class="btn btn-info" style="float:right";><a href="{{url('/create')}}" >Create</a></button></h4>
+                    <h4>Placement Details </h4>
                     <table id="dtHorizontalExample" class="table table-striped table-hover mt-4 table-bordered table-sm" cellspacing="0" width="100%">
                         <tr style="padding:10px">
                             <td>Date</td>
