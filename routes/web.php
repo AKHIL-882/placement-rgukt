@@ -15,10 +15,16 @@ use Illuminate\Support\Facades\URL;
 |
 */
 
-if (env('APP_ENV') === 'production') {
-    URL::forceSchema('https');
-}
+// if (env('APP_ENV') === 'production') {
+//     URL::forceSchema('https');
+// }
 
-Route::get('/', [PlacementsController::class, 'index']);
-Route::get('/create', [PlacementsController::class, 'create']);
-Route::post('/store', [PlacementsController::class, 'store']);
+// Route::get('/', [PlacementsController::class, 'index']);
+// Route::get('/edit/{id}', [PlacementsController::class, 'edit']);
+// Route::get('/show/{id}', [PlacementsController::class, 'show']);
+// Route::get('/create', [PlacementsController::class, 'create']);
+// Route::post('/store', [PlacementsController::class, 'store']);
+// Route::post('/update/{id}', [PlacementsController::class, 'update']);
+// Route::post('/delete/{id}',[PlacementsController::class, 'update']);
+
+Route::resource('/',PlacementsController::class);

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\Controller;
 use App\Models\Placement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -16,9 +16,11 @@ class PlacementsController extends Controller
     public function index()
     {
         //
+        //$placements = Placement::orderBy('id')->get();
         $placements = DB::table('placements')
                 ->orderBy('id', 'desc')
                 ->get();
+        
         return view('welcome',['placements'=>$placements]);
     }
 
@@ -30,9 +32,7 @@ class PlacementsController extends Controller
     public function create()
     {
         //
-        $placements = DB::table('placements')
-                ->orderBy('id', 'desc')
-                ->get();
+        $placements = Placement::all();
         return view('create',['placements'=>$placements]);
 
     }
@@ -53,7 +53,7 @@ class PlacementsController extends Controller
         $placement->year = $request->input('year');
         $placement->url = $request->input('url');
         $placement->save();
-        return redirect('/');
+        return redirect('create');
     }
 
     /**
@@ -64,6 +64,11 @@ class PlacementsController extends Controller
      */
     public function show($id)
     {
+
+        // $placement = Placement::find($id)->first();
+        // return view('admin.placements.show',[
+        //     'placements'=>$placement
+        // ]);
 
     }
 
@@ -76,6 +81,13 @@ class PlacementsController extends Controller
     public function edit($id)
     {
         //
+
+        $placement = Placement::find($id)->first();
+        return view('edit',[
+            'placements'=>$placement
+        ]);
+
+        return view('create');
     }
 
     /**
@@ -88,7 +100,19 @@ class PlacementsController extends Controller
     public function update(Request $request, $id)
     {
         //
+
+        $placement = Placement::where('id',$id)
+        ->update([
+            'company_name' => $request->input('company_name'),
+            'type' => $request->input('type'),
+            'branch' => $request->input('branch'),
+            'year' => $request->input('year'),
+            'url' => $request->input('url'),
+        ]);
+        
+        return redirect('create');
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -99,5 +123,12 @@ class PlacementsController extends Controller
     public function destroy($id)
     {
         //
+
+        $placement = Placement::find($id);
+
+        $placement->delete();
+
+        return redirect('create');
+
     }
 }

@@ -16,7 +16,7 @@
 
     <link href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
@@ -101,7 +101,7 @@
                                     <div class="container-fluid mt-2">
                                         <div class="row">
                                             <section class="col">
-                                                <form action="{{url('/store')}}" method="POST">
+                                                <form action="/" method="POST">
                                                     @csrf
                                                     <div class="row">
                                                         <div class="mb-2">
@@ -153,6 +153,43 @@
             </div>
         </section>
     </main>
+
+    <main id="main" class="main">
+        <div class="pagetitle container">
+            <div class="card p-3" style="height:auto;">
+                <h4>Placement Details </h4>
+                <table id="dtHorizontalExample" class="table table-striped table-hover mt-4 table-bordered table-sm" cellspacing="0" width="100%">
+                    <tr style="padding:10px">
+                        <td>Date</td>
+                        <td>Company Name</td>
+                        <td>Type</td>
+                        <td>Batch</td>
+                        <td>Passout Year</td>
+                        <td>Link</td>
+                        <td>Tools</td>
+                    </tr>
+                    @foreach($placements as $placement)
+                    <tr>
+                        <td>{{date('m-Y',strtotime($placement->created_at))}}</td>
+                        <td>{{$placement->company_name}}</td>
+                        <td>{{$placement->type}}</td>
+                        <td>{{$placement->branch}}</td>
+                        <td>{{$placement->year}}</td>
+                        <td><button type="button" class="btn btn-info"><a href="{{$placement->url}}" target="blank">Link</a></button></td>
+                    </tr>
+                    @endforeach
+                </table>
+
+            </div>
+        </div>
+        </section>
+
+
+
+    </main>
+
+
+
     <footer id="footer" class="footer">
         <div class="copyright">
             <strong><span>
