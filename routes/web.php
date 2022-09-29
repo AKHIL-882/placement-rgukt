@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\URL;
 |
 */
 
-// if (env('APP_ENV') === 'production') {
-//     URL::forceSchema('https');
-// }
+if (env('APP_ENV') === 'production') {
+    URL::forceSchema('https');
+}
 
 // Route::get('/', [PlacementsController::class, 'index']);
 // Route::get('/edit/{id}', [PlacementsController::class, 'edit']);
