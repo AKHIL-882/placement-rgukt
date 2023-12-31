@@ -15,6 +15,7 @@
 
     <link href="logo.jfif" rel="icon">
     <link href="logo.jfif" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     
 
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -156,11 +157,12 @@
         <table id="dtHorizontalExample" class="table table-striped table-hover mt-4 table-bordered table-sm  text-center" cellspacing="0" width="100%">
             <thead>
                 <tr>
+                    <th></th>
                     <th>Company Name</th>
                     <th>Type</th>
                     <th>Batch</th>
                     <th>Passout Year</th>
-                    <th>Link</th>
+                    <th>Link</th>       
                 </tr>
             </thead>
             <tbody>
@@ -183,12 +185,15 @@
                     @endif
 
                     <tr>
+                        <td>
+                            <i class="fa fa-eye" aria-hidden="true" class="view-button" data-placement-id="{{ $placement->id }}"></i> <span class="view-count">0</span>
+                        </td>
                         <td>{{ $placement->company_name }}</td>
                         <td>{{ $placement->type }}</td>
                         <td>{{ $placement->branch }}</td>
                         <td>{{ $placement->year }}</td>
                         <td>
-                            <button type="button" class="btn btn-info">
+                            <button type="button" class="btn btn-info link-button" data-placement-id="{{ $placement->id }}">
                                 <a href="{{ $placement->url }}" target="blank" style="color: white;">Link</a>
                             </button>
                         </td>
@@ -244,6 +249,36 @@
                 $('#exampleModal').modal('show');
                 sessionStorage.setItem('modalShown', 'true');
             }
+            $('.link-button').on('click', function () {
+            var placementId = $(this).data('placement-id');
+            var viewCountSpan = $(this).closest('tr').find('.view-count');
+            var currentCount = parseInt(localStorage.getItem('placement_' + placementId)) || 0;
+            var newCount = currentCount + 1;
+            localStorage.setItem('placement_' + placementId, newCount);
+            viewCountSpan.text(newCount);
+
+            // console.log('Link clicked for placement ID: ' + placementId + ', New Count: ' + newCount);
+        });
+
+        $('.view-button').on('click', function () {
+            var placementId = $(this).data('placement-id');
+            var viewCountSpan = $(this).find('.view-count');
+            var currentCount = parseInt(localStorage.getItem('placement_' + placementId)) || 0;
+            var newCount = currentCount + 1;
+            localStorage.setItem('placement_' + placementId, newCount);
+            viewCountSpan.text(newCount);
+
+            // console.log('View clicked for placement ID: ' + placementId + ', New Count: ' + newCount);
+        });
+
+        $('.view-count').each(function () {
+            var placementId = $(this).closest('tr').find('.link-button').data('placement-id');
+            var storedCount = localStorage.getItem('placement_' + placementId);
+
+            if (storedCount !== null) {
+                $(this).text(storedCount);
+            }
+        });
         });
     </script>
 </body>
