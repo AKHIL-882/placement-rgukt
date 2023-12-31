@@ -17,10 +17,12 @@ class PlacementsController extends Controller
     {
         //
         //$placements = Placement::orderBy('id')->get();
-        $placements = DB::table('placements')
-                ->orderBy('id', 'desc')
-                ->get();
+        // $placements = DB::table('placements')
+        //         ->orderBy('id', 'desc')
+        //         ->paginate(10);
         
+        $placements = Placement::orderBy('id', 'desc')->paginate(8);
+
         return view('welcome',['placements'=>$placements]);
     }
 

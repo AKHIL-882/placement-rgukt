@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 
     <title>| Placements - RGUKT SKLM | Dashboard </title>
     <meta content="" name="description">
@@ -13,6 +15,7 @@
 
     <link href="logo.jfif" rel="icon">
     <link href="logo.jfif" rel="apple-touch-icon">
+    
 
     <link href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -25,7 +28,7 @@
 
 <body>
 
-    <header id="header" class="header fixed-top d-flex align-items-center">
+<header id="header" class="header fixed-top d-flex align-items-center">
         <div class="d-flex align-items-center justify-content-between">
             <a href="#.html" class="logo d-flex align-items-center">
                 <img src="logo.jfif" alt="">
@@ -33,18 +36,10 @@
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div>
-
-        <div class="search-bar">
-            <form class="search-form d-flex align-items-center" method="POST" action="#">
-                <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-            </form>
-        </div>
-
         
 
     </header>
-    <aside id="sidebar" class="sidebar">
+    <!-- <aside id="sidebar" class="sidebar">
         <ul class="sidebar-nav" id="sidebar-nav">
             <li class="nav-item">
                 <a class="nav-link " href="index.html">
@@ -52,24 +47,13 @@
                     <span>Dashboard</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#.html">
-                    <i class="fa fa-list-alt"></i>
-                    <span>Placements</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#.html">
-                    <i class='fa fa-list-alt'></i>
-                    <span>Internships</span>
-                </a>
-            </li>
         </ul>
 
-    </aside><!-- End Sidebar-->
+    </aside> -->
+    <!-- End Sidebar-->
 
     <main id="main" class="main">
-        <div class="pagetitle mt-5000 container">
+        <!-- <div class="pagetitle mt-5000 container">
             <div class="card p-3">
                 <h1>Dashboard</h1>
                 <nav>
@@ -79,7 +63,9 @@
                     </ol>
                 </nav>
             </div>
-        </div><!-- End Page Title -->
+        </div>
+         -->
+        <!-- End Page Title -->
 
         <!-- <section class="section dashboard">
             <div class="container">
@@ -135,7 +121,7 @@
                 </div>
             </div> -->
 
-            <div class="pagetitle mt-5000 container">
+            <!-- <div class="pagetitle mt-5000 container">
                 <div class="card p-3" style="height:auto;">
                     <h4>Placement Details </h4>
                     <table id="dtHorizontalExample" class="table table-striped table-hover mt-4 table-bordered table-sm" cellspacing="0" width="100%">
@@ -149,7 +135,7 @@
                         </tr>
                         @foreach($placements as $placement)
                         <tr>
-                        <td>{{date('m-Y',strtotime($placement->created_at))}}</td>
+                        <td>{{date('Y-m-d',strtotime($placement->created_at))}}</td>
                             <td>{{$placement->company_name}}</td>
                             <td>{{$placement->type}}</td>
                             <td>{{$placement->branch}}</td>
@@ -158,9 +144,63 @@
                         </tr>
                         @endforeach
                     </table>
-
+                    {{ $placements->links('pagination::default') }}
                 </div>
-            </div>
+            </div> -->
+            <div class="pagetitle mt-5000 container">
+
+
+    <div class="card p-3" style="height:auto;">
+        <h4 align="center"><strong> Online Placement Dashboard </strong></h4>
+        <div class="table-responsive">
+        <table id="dtHorizontalExample" class="table table-striped table-hover mt-4 table-bordered table-sm  text-center" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Company Name</th>
+                    <th>Type</th>
+                    <th>Batch</th>
+                    <th>Passout Year</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                @php
+                    $currentDate = null;
+                @endphp
+
+                @foreach($placements as $placement)
+                    @php
+                        $formattedDate = \Carbon\Carbon::parse($placement->created_at)->format('M d, Y');
+                    @endphp
+
+                    @if($formattedDate != $currentDate)
+                        <tr style="background-color: #881719; text-align: center;">
+                            <td colspan="6"><h5 style="color: white;">{{ $formattedDate }}</h5></td>
+                        </tr>
+                        @php
+                            $currentDate = $formattedDate;
+                        @endphp
+                    @endif
+
+                    <tr>
+                        <td>{{ $placement->company_name }}</td>
+                        <td>{{ $placement->type }}</td>
+                        <td>{{ $placement->branch }}</td>
+                        <td>{{ $placement->year }}</td>
+                        <td>
+                            <button type="button" class="btn btn-info">
+                                <a href="{{ $placement->url }}" target="blank" style="color: white;">Link</a>
+                            </button>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+        </div>
+        {{ $placements->links('pagination::default') }}
+    </div>
+</div>
+
         </section>
 
 
