@@ -216,6 +216,36 @@
             <img src="https://hitwebcounter.com/counter/counter.php?page=8022360&style=0025&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter" border="0" style="float:right; height:18px" />
         </div>
     </footer>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Notice</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p style="font-weight: bold">
+                        1. Website UI updated! <br>
+                        2. You can find the jobs on daily basis <br>
+                        3. Pagination added to make it easy to navigate for finding suitable jobs <br>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            if (!sessionStorage.getItem('modalShown')) {
+                $('#exampleModal').modal('show');
+                sessionStorage.setItem('modalShown', 'true');
+            }
+        });
+    </script>
 </body>
 
 </html>
