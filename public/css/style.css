@@ -686,3 +686,56 @@ tr {
   display: table;
   table-layout: fixed;
 }
+
+/*--------------------------------------------------------------
+# Marque
+--------------------------------------------------------------*/
+.ticker {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.news {
+  width: 80%;
+  background: #44cc6f;
+  padding: 0 2%;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  width: 20%;
+  text-align: center;
+  background: #2a1cc8;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+
+.title:after {
+  position: absolute;
+  content: "";
+  right: -11%;
+  border-left: 16px solid #3e1cc8;
+  border-top: 24px solid transparent;
+  border-right: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+  top: 0px
+}
+
+.title h5 {
+  font-size: 18px;
+  margin: 8% 0
+}
+
+.news marquee {
+  font-size: 18px;
+  width: 100%;
+}
+
+.news-content p {
+  display: inline;
+}
